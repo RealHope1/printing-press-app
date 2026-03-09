@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INKWATT - Smart Printing Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/glass-ui.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="INKWATT" class="logo-image">
+                <div class="logo-text">
+                    <h1>INKWATT</h1>
+                    <span class="tagline">Smart Printing Solutions</span>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Animated Printers -->
+    <section class="hero">
+        <div class="hero-content animate-fade-in">
+            <h1 class="hero-title animate-slide-up">
+                Welcome to <span class="ink-blue">INKWATT</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in">Your Smart Printing Partner for Quality Results</p>
+            <p class="hero-subtitle animate-fade-in">Advanced Printing Technology at Your Fingertips</p>
+            <div class="hero-buttons animate-slide-up-delay">
+                <a href="services.html" class="btn-primary">Explore Services</a>
+                <a href="shop.html" class="btn-secondary">Browse Products</a>
+            </div>
+        </div>
+        
+        <!-- Animated Printer Cards -->
+        <div class="printers-showcase">
+            <div class="printer-card animate-flip" data-delay="0">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/dtf.jfif" alt="DTF Printer">
+                        <h3>DTF Printer</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Direct-to-Film printing technology for vibrant, durable prints on any fabric</p>
+                        <a href="services.html" class="card-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="printer-card animate-flip" data-delay="200">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/large format printer.jpg" alt="Large Format Printer">
+                        <h3>Large Format</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Professional large format printing for posters, banners, and signage</p>
+                        <a href="services.html" class="card-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="printer-card animate-flip" data-delay="400">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/prenter.jpg" alt="Inkjet Printer">
+                        <h3>Inkjet Printer</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>High-quality inkjet printing for documents and photos</p>
+                        <a href="services.html" class="card-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="printer-card animate-flip" data-delay="600">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/t-sert.jpg" alt="T-Shirt Printer">
+                        <h3>T-Shirt Printer</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Custom t-shirt printing with vibrant colors and lasting quality</p>
+                        <a href="shop.html" class="card-btn">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="printer-card animate-flip" data-delay="800">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/stamp.jpg" alt="Rubber Stamp Printer">
+                        <h3>Rubber Stamp</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Custom rubber stamps for business and personal use</p>
+                        <a href="services.html" class="card-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="printer-card animate-flip" data-delay="1000">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/coffee.jpg" alt="Cup Printer">
+                        <h3>Cup Printer</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Custom printed cups and mugs for promotions and gifts</p>
+                        <a href="shop.html" class="card-btn">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="printer-card animate-flip" data-delay="1200">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/frame1.jpg" alt="Book Printer">
+                        <h3>Book Printer</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Professional book printing and binding services</p>
+                        <a href="services.html" class="card-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="container">
+            <h2 class="section-title animate-fade-in">Our Printing Services</h2>
+            <div class="services-grid">
+                <div class="service-item animate-scale-up">
+                    <div class="service-icon">👕</div>
+                    <h3>T-Shirt Printing</h3>
+                    <p>Custom apparel with vibrant colors</p>
+                </div>
+                <div class="service-item animate-scale-up" data-delay="200">
+                    <div class="service-icon">📄</div>
+                    <h3>Flyer Printing</h3>
+                    <p>Professional marketing materials</p>
+                </div>
+                <div class="service-item animate-scale-up" data-delay="400">
+                    <div class="service-icon">📊</div>
+                    <h3>Business Cards</h3>
+                    <p>Premium quality business cards</p>
+                </div>
+                <div class="service-item animate-scale-up" data-delay="600">
+                    <div class="service-icon">📚</div>
+                    <h3>Book Printing</h3>
+                    <p>Custom book publishing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Gallery & Customer Feedback -->
+    <section class="advanced-gallery">
+        <div class="container">
+            <h2 class="section-title animate-fade-in">Our Premium Work</h2>
+            <p class="section-subtitle animate-slide-up">Showcasing Excellence in Printing Solutions</p>
+            
+            <!-- Gallery Tabs -->
+            <div class="gallery-tabs animate-fade-in">
+                <button class="tab-btn active" data-category="all">All Works</button>
+                <button class="tab-btn" data-category="tshirts">T-Shirts</button>
+                <button class="tab-btn" data-category="business">Business</button>
+                <button class="tab-btn" data-category="large">Large Format</button>
+                <button class="tab-btn" data-category="custom">Custom</button>
+            </div>
+
+            <!-- Advanced Gallery Grid -->
+            <div class="advanced-gallery-grid">
+                <div class="gallery-item-large animate-zoom-in" data-category="tshirts">
+                    <div class="gallery-image-container">
+                        <img src="images/photo_16_2026-03-07_18-17-47.jpg" alt="Premium T-Shirt Collection">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Premium T-Shirt Collection</h3>
+                                <p>High-quality custom apparel with vibrant DTF printing</p>
+                                <div class="overlay-actions">
+                                    <button class="view-btn">View Details</button>
+                                    <button class="order-btn">Order Similar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item-medium animate-slide-in-left" data-category="business">
+                    <div class="gallery-image-container">
+                        <img src="images/bussiness card.jpg" alt="Business Cards">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Professional Business Cards</h3>
+                                <p>Premium quality with special finishes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item-medium animate-slide-in-right" data-category="large">
+                    <div class="gallery-image-container">
+                        <img src="images/large format printer.jpg" alt="Large Format Printing">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Large Format Excellence</h3>
+                                <p>Banners, posters, and signage</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item-tall animate-bounce-in" data-category="custom">
+                    <div class="gallery-image-container">
+                        <img src="images/photo_23_2026-03-07_18-17-50.jpg" alt="Custom Mugs">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Custom Branded Mugs</h3>
+                                <p>Perfect for corporate gifts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item-tall animate-rotate-in" data-category="tshirts">
+                    <div class="gallery-image-container">
+                        <img src="images/photo_15_2026-03-07_18-17-47.jpg" alt="Team Uniforms">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Team Uniforms</h3>
+                                <p>Professional team apparel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item-wide animate-slide-in-up" data-category="business">
+                    <div class="gallery-image-container">
+                        <img src="images/photo_17_2026-03-07_18-17-47.jpg" alt="Premium Cards">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Luxury Business Cards</h3>
+                                <p>Special finishes and premium materials</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item-medium animate-float" data-category="large">
+                    <div class="gallery-image-container">
+                        <img src="images/photo_20_2026-03-07_18-17-49.jpg" alt="Event Posters">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Event Posters</h3>
+                                <p>Eye-catching promotional materials</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item-medium animate-wave" data-category="custom">
+                    <div class="gallery-image-container">
+                        <img src="images/photo_24_2026-03-07_18-17-51.jpg" alt="Custom Stamps">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Custom Rubber Stamps</h3>
+                                <p>Professional business solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="customer-testimonials">
+        <div class="container">
+            <h2 class="section-title animate-fade-in">What Our Clients Say</h2>
+            <p class="section-subtitle animate-slide-up">Trusted by businesses and individuals across Ghana</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-scale-up">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>INKWATT delivered exceptional quality t-shirts for our company event. The printing was vibrant and the delivery was on time. Highly recommended!</p>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Michael Johnson</h4>
+                            <p>CEO, TechHub Ghana</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card animate-scale-up" data-delay="200">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>The business cards they printed for us exceeded expectations. The quality and finish were exactly what we wanted for our premium brand.</p>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Sarah Mensah</h4>
+                            <p>Marketing Director, Creative Agency</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card animate-scale-up" data-delay="400">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>Fast turnaround and excellent quality! Our event posters looked professional and really stood out. Will definitely use their services again.</p>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>David Asante</h4>
+                            <p>Event Coordinator, Accra Events</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card animate-scale-up" data-delay="600">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>The custom mugs we ordered for our corporate gifts were perfect. Great printing quality and excellent customer service throughout.</p>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Emma Thompson</h4>
+                            <p>HR Manager, Global Logistics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Stats -->
+            <div class="customer-stats">
+                <div class="stat-item animate-float">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item animate-float" data-delay="200">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item animate-float" data-delay="400">
+                    <div class="stat-number">4.9/5</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+                <div class="stat-item animate-float" data-delay="600">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content animate-fade-in">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Connect with us instantly via WhatsApp for immediate assistance</p>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/233594188747" target="_blank" class="whatsapp-btn">
+                        <span class="whatsapp-icon">📱</span>
+                        Chat on WhatsApp
+                    </a>
+                    <a href="contact.html" class="btn-secondary">Contact Form</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="INKWATT" class="footer-logo-image">
+                        <div class="footer-logo-text">
+                            <h3>INKWATT</h3>
+                            <p>Smart Printing Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>WhatsApp: +233 594 188 747</p>
+                    <p>Available 24/7</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 INKWATT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/233594188747" target="_blank" class="whatsapp-float">
+        <span class="whatsapp-icon">💬</span>
+        <span class="whatsapp-text">Chat With Us</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/whatsappBot.js"></script>
+    
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    this.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.textContent = '☰';
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.textContent = '☰';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <!-- Gallery and Testimonials JavaScript -->
+    <script>
+        // Gallery Tab Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const galleryItems = document.querySelectorAll('.advanced-gallery-grid > div');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Update active button
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter gallery items
+                    galleryItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                            // Re-trigger animation
+                            item.style.animation = 'none';
+                            setTimeout(() => {
+                                item.style.animation = '';
+                            }, 10);
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Gallery item interactions
+            const viewButtons = document.querySelectorAll('.view-btn');
+            const orderButtons = document.querySelectorAll('.order-btn');
+            
+            viewButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const container = this.closest('.gallery-image-container');
+                    const title = container.querySelector('h3').textContent;
+                    
+                    // Create modal for detailed view
+                    createGalleryModal(container.querySelector('img').src, title);
+                });
+            });
+            
+            orderButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const container = this.closest('.gallery-image-container');
+                    const title = container.querySelector('h3').textContent;
+                    
+                    // Send WhatsApp order
+                    const message = `Hello INKWATT! I'm interested in: ${title}. Can you provide more information and pricing?`;
+                    const whatsappUrl = `https://wa.me/233594188747?text=${encodeURIComponent(message)}`;
+                    window.open(whatsappUrl, '_blank');
+                });
+            });
+            
+            // Testimonial hover effects
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            testimonialCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // Stats counter animation
+            animateStats();
+        });
+        
+        // Gallery Modal Function
+        function createGalleryModal(imageSrc, title) {
+            const modal = document.createElement('div');
+            modal.className = 'gallery-modal glass-modal active';
+            modal.innerHTML = `
+                <div class="glass-modal-content">
+                    <button class="close-modal" onclick="this.closest('.gallery-modal').remove()">&times;</button>
+                    <div class="modal-gallery-content">
+                        <img src="${imageSrc}" alt="${title}">
+                        <div class="modal-info">
+                            <h3>${title}</h3>
+                            <p>High-quality printing with exceptional results. Contact us for similar projects.</p>
+                            <div class="modal-actions">
+                                <button onclick="window.open('https://wa.me/233594188747?text=Hello INKWATT! I\'m interested in: ${title}', '_blank')" class="glass-btn" style="background: #25D366; color: white;">Order Similar</button>
+                                <button onclick="this.closest('.gallery-modal').remove()" class="glass-btn" style="background: rgba(255, 255, 255, 0.2);">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Close on outside click
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+        
+        // Stats Counter Animation
+        function animateStats() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const finalText = target.textContent;
+                        const finalNumber = parseInt(finalText.replace(/[^\d]/g, ''));
+                        const suffix = finalText.replace(/[\d,]/g, '');
+                        
+                        let current = 0;
+                        const increment = finalNumber / 50;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= finalNumber) {
+                                current = finalNumber;
+                                clearInterval(timer);
+                            }
+                            target.textContent = Math.floor(current).toLocaleString() + suffix;
+                        }, 30);
+                        
+                        observer.unobserve(target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            statNumbers.forEach(stat => observer.observe(stat));
+        }
+        
+        // Gallery image lazy loading
+        const galleryImages = document.querySelectorAll('.gallery-image-container img');
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.style.opacity = '0';
+                    img.onload = () => {
+                        img.style.transition = 'opacity 0.5s ease';
+                        img.style.opacity = '1';
+                    };
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        galleryImages.forEach(img => imageObserver.observe(img));
+    </script>
+    
+    <style>
+        /* Additional Gallery Styles */
+        .gallery-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-gallery-content {
+            display: flex;
+            gap: 2rem;
+            max-width: 90%;
+            max-height: 90%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .modal-gallery-content img {
+            max-width: 60%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 15px;
+        }
+        
+        .modal-info {
+            flex: 1;
+            padding: 2rem;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .modal-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        @media (max-width: 768px) {
+            .modal-gallery-content {
+                flex-direction: column;
+                max-width: 95%;
+                max-height: 95%;
+            }
+            
+            .modal-gallery-content img {
+                max-width: 100%;
+                max-height: 50vh;
+            }
+            
+            .modal-info {
+                padding: 1.5rem;
+            }
+            
+            .modal-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</body>
+</html>

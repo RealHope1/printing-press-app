@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - INKWATT Smart Printing Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/glass-ui.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="INKWATT" class="logo-image">
+                <div class="logo-text">
+                    <h1>INKWATT</h1>
+                    <span class="tagline">Smart Printing Solutions</span>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="shop.html" class="nav-link active">Shop</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Shop Hero -->
+    <section class="shop-hero">
+        <div class="container">
+            <div class="hero-content animate-fade-in">
+                <h1>Our Shop</h1>
+                <p>Browse our wide range of printing products and services</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="shop-filters">
+        <div class="container">
+            <div class="filter-container">
+                <div class="search-box">
+                    <input type="text" id="productSearch" placeholder="Search products..." class="glass-input">
+                    <button onclick="searchProducts()" class="glass-btn">🔍 Search</button>
+                </div>
+                
+                <div class="filter-controls">
+                    <select id="categoryFilter" onchange="filterProducts()" class="glass-select">
+                        <option value="">All Categories</option>
+                        <option value="tshirts">T-Shirts</option>
+                        <option value="business">Business Cards</option>
+                        <option value="flyers">Flyers</option>
+                        <option value="posters">Posters</option>
+                        <option value="books">Books</option>
+                        <option value="cups">Cups & Mugs</option>
+                        <option value="stamps">Rubber Stamps</option>
+                    </select>
+                    
+                    <select id="sizeFilter" onchange="filterProducts()" class="glass-select">
+                        <option value="">All Sizes</option>
+                        <option value="A0">A0</option>
+                        <option value="A1">A1</option>
+                        <option value="A2">A2</option>
+                        <option value="A3">A3</option>
+                        <option value="A4">A4</option>
+                        <option value="A5">A5</option>
+                        <option value="Letter">Letter</option>
+                        <option value="Legal">Legal</option>
+                        <option value="Custom">Custom</option>
+                    </select>
+                    
+                    <select id="priceFilter" onchange="filterProducts()" class="glass-select">
+                        <option value="">All Prices</option>
+                        <option value="0-10">Under GHS 10</option>
+                        <option value="10-50">GHS 10 - GHS 50</option>
+                        <option value="50-100">GHS 50 - GHS 100</option>
+                        <option value="100+">Above GHS 100</option>
+                    </select>
+                    
+                    <button onclick="resetFilters()" class="glass-btn">Reset Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- T-Shirt Products -->
+                <div class="product-card" data-category="tshirts" data-price="30" data-size="Custom">
+                    <div class="product-image">
+                        <img src="images/tshert.jpg" alt="Basic T-Shirt">
+                        <div class="product-overlay">
+                            <button onclick="quickView('Basic T-Shirt', 30)" class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Basic T-Shirt Printing</h3>
+                        <p>Custom printed t-shirts with your design</p>
+                        <div class="product-price">
+                            <span class="price">GHS 55</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <div class="product-actions">
+                            <button onclick="orderProduct('Basic T-Shirt', 55)" class="order-btn">Order Now</button>
+                            <button onclick="viewProduct('Basic T-Shirt')" class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="tshirts" data-price="50" data-size="Custom">
+                    <div class="product-image">
+                        <img src="images/t-sert.jpg" alt="Premium T-Shirt">
+                        <div class="product-overlay">
+                            <button onclick="quickView('Premium T-Shirt', 50)" class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium T-Shirt Printing</h3>
+                        <p>High-quality t-shirts with advanced printing</p>
+                        <div class="product-price">
+                            <span class="price">GHS 60</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <div class="product-actions">
+                            <button onclick="orderProduct('Premium T-Shirt', 60)" class="order-btn">Order Now</button>
+                            <button onclick="viewProduct('Premium T-Shirt')" class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Card Products -->
+                <div class="product-card" data-category="business" data-price="3" data-size="A6">
+                    <div class="product-image">
+                        <img src="images/bussiness card.jpg" alt="Basic Business Card">
+                        <div class="product-overlay">
+                            <button onclick="quickView('Basic Business Card', 3)" class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Basic Business Cards</h3>
+                        <p>Standard business cards on quality paper</p>
+                        <div class="product-price">
+                            <span class="price">GHS 3</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <div class="product-actions">
+                            <button onclick="orderProduct('Basic Business Card', 3)" class="order-btn">Order Now</button>
+                            <button onclick="viewProduct('Basic Business Card')" class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="business" data-price="5" data-size="A6">
+                    <div class="product-image">
+                        <img src="images/bussiness.jpg" alt="Premium Business Card">
+                        <div class="product-overlay">
+                            <button onclick="quickView('Premium Business Card', 5)" class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Business Cards</h3>
+                        <p>Luxury business cards with special finishes</p>
+                        <div class="product-price">
+                            <span class="price">GHS 5</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <div class="product-actions">
+                            <button onclick="orderProduct('Premium Business Card', 5)" class="order-btn">Order Now</button>
+                            <button onclick="viewProduct('Premium Business Card')" class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flyer Products -->
+                <div class="product-card" data-category="flyers" data-price="0.50" data-size="A5">
+                    <div class="product-image">
+                        <img src="images/flyer.jpg" alt="Basic Flyer">
+                        <div class="product-overlay">
+                            <button onclick="quickView('Basic Flyer', 5)" class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Basic Flyer</h3>
+                        <p>Standard flyers for promotions and events</p>
+                        <div class="product-price">
+                            <span class="price">GHS 5</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <div class="product-actions">
+                            <button onclick="orderProduct('Basic Flyer', 5)" class="order-btn">Order Now</button>
+                            <button onclick="viewProduct('Basic Flyer')" class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="flyers" data-price="1" data-size="A5">
+                    <div class="product-image">
+                        <img src="images/flyy.jpg" alt="Premium Flyer">
+                        <div class="product-overlay">
+                            <button onclick="quickView('Premium Flyer', 7)" class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Flyer</h3>
+                        <p>High-quality flyers with premium paper</p>
+                        <div class="product-price">
+                            <span class="price">GHS 7</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <div class="product-actions">
+                            <button onclick="orderProduct('Premium Flyer', 1)" class="order-btn">Order Now</button>
+                            <button onclick="viewProduct('Premium Flyer')" class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poster Products -->
+                <div class="product-card" data-category="posters" data-price="20" data-size="A3">
+                    <div class="product-image">
+                        <img src="images/poster.jpg" alt="Basic Poster">
+                        <div class="product-overlay">
+                            <button onclick="quickView('Basic Poster', 20)" class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Basic Poster</h3>
+                        <p>Standard posters for events and advertising</p>
+                        <div class="product-price">
+                            <span class="price">GHS 10</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <div class="product-actions">
+                            <button onclick="orderProduct('Basic Poster', 10)" class="order-btn">Order Now</button>
+                            <button onclick="viewProduct('Basic Poster')" class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="posters" data-price="20" data-size="A2">
+                    <div class="product-image">
+                        <img src="images/post.jpg" alt="Large Poster">
+                        <div class="product-overlay">
+                            <button onclick="quickView('Large Poster', 20)" class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Large Poster</h3>
+                        <p>Large format posters for maximum impact</p>
+                        <div class="product-price">
+                            <span class="price">GHS 20</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <div class="product-actions">
+                            <button onclick="orderProduct('Large Poster', 20)" class="order-btn">Order Now</button>
+                            <button onclick="viewProduct('Large Poster')" class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Products -->
+                <div class="product-card" data-category="books" data-price="5" data-size="A5">
+                    <div class="product-image">
+                        <img src="images/book.jpg" alt="Paperback Book">
+                        <div class="product-overlay">
+                            <button onclick="quickView('Paperback Book', 5)" class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Paperback Book Printing</h3>
+                        <p>Quality paperback book printing</p>
+                        <div class="product-price">
+                            <span class="price">GHS 10</span>
+                            <span class="price-unit">per book</span>
+                        </div>
+                        <div class="product-actions">
+                            <button onclick="orderProduct('Paperback Book', 10)" class="order-btn">Order Now</button>
+                            <button onclick="viewProduct('Paperback Book')" class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cup Products -->
+                <div class="product-card" data-category="cups" data-price="25" data-size="Custom">
+                    <div class="product-image">
+                        <img src="images/cup.jpg" alt="Basic Mug">
+                        <div class="product-overlay">
+                            <button onclick="quickView('Basic Mug', 25)" class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Basic Printed Mug</h3>
+                        <p>Custom printed ceramic mugs</p>
+                        <div class="product-price">
+                            <span class="price">GHS 25</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <div class="product-actions">
+                            <button onclick="orderProduct('Basic Mug', 25)" class="order-btn">Order Now</button>
+                            <button onclick="viewProduct('Basic Mug')" class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stamp Products -->
+                <div class="product-card" data-category="stamps" data-price="40" data-size="Custom">
+                    <div class="product-image">
+                        <img src="images/stamp.jpg" alt="Basic Stamp">
+                        <div class="product-overlay">
+                            <button onclick="quickView('Basic Rubber Stamp', 40)" class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Basic Rubber Stamp</h3>
+                        <p>Custom rubber stamps for business use</p>
+                        <div class="product-price">
+                            <span class="price">GHS 40</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <div class="product-actions">
+                            <button onclick="orderProduct('Basic Rubber Stamp', 40)" class="order-btn">Order Now</button>
+                            <button onclick="viewProduct('Basic Rubber Stamp')" class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <div class="glass-card">
+                    <h3>No Products Found</h3>
+                    <p>Try adjusting your filters or search terms</p>
+                    <button onclick="resetFilters()" class="glass-btn">Reset Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="glass-modal">
+        <div class="glass-modal-content">
+            <div class="quick-view-content">
+                <div class="quick-view-image">
+                    <img id="quickViewImage" src="" alt="Product">
+                </div>
+                <div class="quick-view-info">
+                    <h3 id="quickViewTitle"></h3>
+                    <p id="quickViewDescription"></p>
+                    <div class="quick-view-price">
+                        <span id="quickViewPrice"></span>
+                    </div>
+                    <div class="quick-view-actions">
+                        <button onclick="orderFromQuickView()" class="glass-btn" style="background: #25D366; color: white;">Order Now</button>
+                        <button onclick="viewFromQuickView()" class="glass-btn">View Details</button>
+                        <button onclick="closeQuickView()" class="glass-btn" style="background: rgba(255, 255, 255, 0.2);">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="INKWATT" class="footer-logo-image">
+                        <div class="footer-logo-text">
+                            <h3>INKWATT</h3>
+                            <p>Smart Printing Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>WhatsApp: +233 594 188 747</p>
+                    <p>Available 24/7</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 INKWATT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/233594188747" target="_blank" class="whatsapp-float">
+        <span class="whatsapp-icon">💬</span>
+        <span class="whatsapp-text">Chat With Us</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/whatsappBot.js"></script>
+    <script src="js/shop.js"></script>
+    
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    this.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.textContent = '☰';
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.textContent = '☰';
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        let currentQuickViewProduct = null;
+
+        // Search products
+        function searchProducts() {
+            const searchTerm = document.getElementById('productSearch').value.toLowerCase();
+            const products = document.querySelectorAll('.product-card');
+            let visibleCount = 0;
+
+            products.forEach(product => {
+                const title = product.querySelector('h3').textContent.toLowerCase();
+                const description = product.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    product.style.display = '';
+                    visibleCount++;
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        // Filter products
+        function filterProducts() {
+            const category = document.getElementById('categoryFilter').value;
+            const size = document.getElementById('sizeFilter').value;
+            const priceRange = document.getElementById('priceFilter').value;
+            const products = document.querySelectorAll('.product-card');
+            let visibleCount = 0;
+
+            products.forEach(product => {
+                let show = true;
+                
+                // Category filter
+                if (category && product.dataset.category !== category) {
+                    show = false;
+                }
+                
+                // Size filter
+                if (size && product.dataset.size !== size) {
+                    show = false;
+                }
+                
+                // Price filter
+                if (priceRange) {
+                    const productPrice = parseFloat(product.dataset.price);
+                    if (priceRange === '0-10' && productPrice >= 10) show = false;
+                    if (priceRange === '10-50' && (productPrice < 10 || productPrice >= 50)) show = false;
+                    if (priceRange === '50-100' && (productPrice < 50 || productPrice >= 100)) show = false;
+                    if (priceRange === '100+' && productPrice < 100) show = false;
+                }
+                
+                product.style.display = show ? '' : 'none';
+                if (show) visibleCount++;
+            });
+
+            // Show/hide no results message
+            document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        // Reset filters
+        function resetFilters() {
+            document.getElementById('productSearch').value = '';
+            document.getElementById('categoryFilter').value = '';
+            document.getElementById('sizeFilter').value = '';
+            document.getElementById('priceFilter').value = '';
+            
+            const products = document.querySelectorAll('.product-card');
+            products.forEach(product => {
+                product.style.display = '';
+            });
+            
+            document.getElementById('noResults').style.display = 'none';
+        }
+
+        // Quick view
+        function quickView(productName, price) {
+            currentQuickViewProduct = { name: productName, price: price };
+            
+            const modal = document.getElementById('quickViewModal');
+            document.getElementById('quickViewTitle').textContent = productName;
+            document.getElementById('quickViewPrice').textContent = `GHS ${price}`;
+            document.getElementById('quickViewDescription').textContent = 'High-quality printing with professional finish. Perfect for your business or personal needs.';
+            document.getElementById('quickViewImage').src = `images/${getProductCategory(productName).toLowerCase()}/sample.jpg`;
+            
+            modal.classList.add('active');
+        }
+
+        function closeQuickView() {
+            document.getElementById('quickViewModal').classList.remove('active');
+            currentQuickViewProduct = null;
+        }
+
+        function orderFromQuickView() {
+            if (currentQuickViewProduct) {
+                orderProduct(currentQuickViewProduct.name, currentQuickViewProduct.price);
+                closeQuickView();
+            }
+        }
+
+        function viewFromQuickView() {
+            if (currentQuickViewProduct) {
+                viewProduct(currentQuickViewProduct.name);
+                closeQuickView();
+            }
+        }
+
+        // Order product
+        function orderProduct(productName, price) {
+            const modal = document.createElement('div');
+            modal.className = 'glass-modal active';
+            modal.innerHTML = `
+                <div class="glass-modal-content">
+                    <h3>Order ${productName}</h3>
+                    <form id="productOrderForm">
+                        <div class="glass-form-group">
+                            <label class="glass-label">Your Name</label>
+                            <input type="text" class="glass-input" name="name" required>
+                        </div>
+                        <div class="glass-form-group">
+                            <label class="glass-label">Phone Number</label>
+                            <input type="tel" class="glass-input" name="phone" required>
+                        </div>
+                        <div class="glass-form-group">
+                            <label class="glass-label">Quantity</label>
+                            <input type="number" class="glass-input" name="quantity" min="1" required>
+                        </div>
+                        <div class="glass-form-group">
+                            <label class="glass-label">Size/Specifications</label>
+                            <select class="glass-select" name="size" required>
+                                <option value="">Select size</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                                <option value="A4">A4</option>
+                                <option value="A3">A3</option>
+                                <option value="Custom">Custom</option>
+                            </select>
+                        </div>
+                        <div class="glass-form-group">
+                            <label class="glass-label">Delivery Date</label>
+                            <input type="date" class="glass-input" name="delivery" required>
+                        </div>
+                        <div class="glass-form-group">
+                            <label class="glass-label">Design Notes</label>
+                            <textarea class="glass-textarea" name="notes" placeholder="Describe your design requirements..."></textarea>
+                        </div>
+                        <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+                            <button type="button" onclick="this.closest('.glass-modal').remove()" class="glass-btn" style="background: rgba(255, 255, 255, 0.2);">
+                                Cancel
+                            </button>
+                            <button type="submit" class="glass-btn" style="background: #25D366; color: white;">
+                                Send Order via WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            modal.querySelector('#productOrderForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target);
+                const data = Object.fromEntries(formData);
+                
+                const message = `Hello INKWATT! 🛍️\n\nI want to order:\n\nProduct: ${productName}\nPrice: GHS ${price} per piece\nName: ${data.name}\nPhone: ${data.phone}\nQuantity: ${data.quantity}\nSize: ${data.size}\nDelivery Date: ${data.delivery}\nDesign Notes: ${data.notes}\n\nPlease confirm availability and total cost.\nThank you! 🙏`;
+                
+                const whatsappUrl = `https://wa.me/233594188747?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+                
+                modal.remove();
+            });
+        }
+
+        // View product details
+        function viewProduct(productName) {
+            // Redirect to product page or show detailed modal
+            window.location.href = `product.html?product=${encodeURIComponent(productName)}`;
+        }
+
+        // Helper function to get product category
+        function getProductCategory(productName) {
+            if (productName.toLowerCase().includes('t-shirt')) return 'tshirts';
+            if (productName.toLowerCase().includes('card')) return 'cards';
+            if (productName.toLowerCase().includes('flyer')) return 'flyers';
+            if (productName.toLowerCase().includes('poster')) return 'posters';
+            if (productName.toLowerCase().includes('book')) return 'books';
+            if (productName.toLowerCase().includes('mug') || productName.toLowerCase().includes('cup')) return 'cups';
+            if (productName.toLowerCase().includes('stamp')) return 'stamps';
+            return 'general';
+        }
+
+        // Search on Enter key
+        document.getElementById('productSearch').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchProducts();
+            }
+        });
+
+        // Close modal on outside click
+        document.getElementById('quickViewModal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeQuickView();
+            }
+        });
+    </script>
+
+    <style>
+        /* Shop Page Specific Styles */
+        .shop-hero {
+            padding: 120px 0 60px;
+            text-align: center;
+            color: white;
+        }
+
+        .shop-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .shop-filters {
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .filter-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .search-box input {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .filter-controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-controls select {
+            min-width: 150px;
+        }
+
+        .products-section {
+            padding: 60px 0;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .quick-view-btn {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .quick-view-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h3 {
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-size: 1.2rem;
+        }
+
+        .product-info p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .price-unit {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .order-btn, .view-btn {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .order-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .order-btn:hover {
+            background: #128C7E;
+        }
+
+        .view-btn {
+            background: rgba(0, 102, 204, 0.1);
+            color: #0066cc;
+            border: 1px solid rgba(0, 102, 204, 0.3);
+        }
+
+        .view-btn:hover {
+            background: rgba(0, 102, 204, 0.2);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .no-results h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .no-results p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .quick-view-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .quick-view-image {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .quick-view-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .quick-view-info h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .quick-view-info p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .quick-view-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 1.5rem;
+        }
+
+        .quick-view-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .filter-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-controls select {
+                width: 100%;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .quick-view-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .shop-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</body>
+</html>

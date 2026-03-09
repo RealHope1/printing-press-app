@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - INKWATT Smart Printing Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/glass-ui.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="INKWATT" class="logo-image">
+                <div class="logo-text">
+                    <h1>INKWATT</h1>
+                    <span class="tagline">Smart Printing Solutions</span>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content animate-fade-in">
+                <h1>Get in Touch</h1>
+                <p>We're here to help with all your printing needs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card animate-scale-up">
+                    <div class="info-icon">📱</div>
+                    <h3>WhatsApp</h3>
+                    <p>+233 594 188 747</p>
+                    <p>Available 24/7</p>
+                    <a href="https://wa.me/233594188747" target="_blank" class="contact-btn">Chat Now</a>
+                </div>
+                
+                <div class="info-card animate-scale-up" data-delay="200">
+                    <div class="info-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Accra, Ghana</p>
+                    <p>West Africa</p>
+                    <button onclick="showLocationMap()" class="contact-btn">View Map</button>
+                </div>
+                
+                <div class="info-card animate-scale-up" data-delay="400">
+                    <div class="info-icon">⏰</div>
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 8AM - 6PM</p>
+                    <p>Saturday: 9AM - 4PM</p>
+                    <p>Sunday: Emergency Only</p>
+                </div>
+                
+                <div class="info-card animate-scale-up" data-delay="600">
+                    <div class="info-icon">🚀</div>
+                    <h3>Emergency Orders</h3>
+                    <p>Urgent printing needs?</p>
+                    <p>We've got you covered!</p>
+                    <a href="https://wa.me/233594188747?text=🚨%20URGENT%20ORDER%20REQUEST%20🚨" target="_blank" class="contact-btn emergency">Emergency Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-container">
+                <div class="form-header animate-fade-in">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible</p>
+                </div>
+                
+                <form id="contactForm" class="glass-card animate-slide-up">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="glass-label">Full Name *</label>
+                            <input type="text" name="name" class="glass-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="glass-label">Email Address</label>
+                            <input type="email" name="email" class="glass-input">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="glass-label">Phone Number *</label>
+                            <input type="tel" name="phone" class="glass-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="glass-label">Company/Organization</label>
+                            <input type="text" name="company" class="glass-input">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="glass-label">Service Interested In *</label>
+                        <select name="service" class="glass-select" required>
+                            <option value="">Select a service</option>
+                            <option value="DTF Printing">DTF Printing</option>
+                            <option value="T-Shirt Printing">T-Shirt Printing</option>
+                            <option value="Flyer Printing">Flyer Printing</option>
+                            <option value="Poster Printing">Poster Printing</option>
+                            <option value="Book Printing">Book Printing</option>
+                            <option value="Cup Printing">Cup Printing</option>
+                            <option value="Rubber Stamp Printing">Rubber Stamp Printing</option>
+                            <option value="Business Cards">Business Cards</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="glass-label">Project Details</label>
+                        <textarea name="message" class="glass-textarea" rows="5" 
+                            placeholder="Tell us about your printing project, quantity needed, delivery timeline, and any specific requirements..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="glass-label">Upload Design Files (Optional)</label>
+                        <div class="file-upload-area">
+                            <input type="file" id="designFiles" name="designFiles" class="file-input" 
+                                accept="image/*,.pdf,.ai,.eps,.psd" multiple>
+                            <label for="designFiles" class="file-upload-label">
+                                <span class="upload-icon">📁</span>
+                                <span class="upload-text">Choose Files or Drag & Drop</span>
+                                <span class="upload-hint">Supported: JPG, PNG, PDF, AI, EPS, PSD (Max 10MB each)</span>
+                            </label>
+                            <div id="fileList" class="file-list"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="glass-label">Preferred Contact Method</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="contactMethod" value="whatsapp" checked>
+                                <span class="radio-label">WhatsApp</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="contactMethod" value="phone">
+                                <span class="radio-label">Phone Call</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="contactMethod" value="email">
+                                <span class="radio-label">Email</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="urgent" value="yes">
+                            <span class="checkbox-label">This is an urgent request</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-icon">📤</span>
+                            Send Message
+                        </button>
+                        <button type="button" onclick="resetForm()" class="reset-btn">
+                            <span class="btn-icon">🔄</span>
+                            Reset Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact Options -->
+    <section class="quick-contact">
+        <div class="container">
+            <h2 class="section-title animate-fade-in">Quick Contact Options</h2>
+            <div class="quick-options">
+                <div class="quick-option animate-scale-up">
+                    <div class="quick-icon">💬</div>
+                    <h3>WhatsApp Chat</h3>
+                    <p>Instant messaging for quick quotes and inquiries</p>
+                    <a href="https://wa.me/233594188747?text=Hi%20INKWATT!%20I%20have%20a%20question%20about%20your%20printing%20services." target="_blank" class="quick-btn">
+                        Start Chat
+                    </a>
+                </div>
+                
+                <div class="quick-option animate-scale-up" data-delay="200">
+                    <div class="quick-icon">📞</div>
+                    <h3>Phone Call</h3>
+                    <p>Speak directly with our printing experts</p>
+                    <a href="tel:+233594188747" class="quick-btn">
+                        Call Now
+                    </a>
+                </div>
+                
+                <div class="quick-option animate-scale-up" data-delay="400">
+                    <div class="quick-icon">📧</div>
+                    <h3>Email Support</h3>
+                    <p>Detailed inquiries and project discussions</p>
+                    <button onclick="showEmailModal()" class="quick-btn">
+                        Send Email
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title animate-fade-in">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item animate-fade-in">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What's your typical turnaround time?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standard orders typically take 3-5 business days. Rush orders can be completed within 24-48 hours for an additional fee. Large volume orders may require additional time.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in" data-delay="200">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Do you offer design services?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We have a team of professional designers who can help create your designs from scratch or improve existing ones. Design services are available for an additional fee.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in" data-delay="400">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What payment methods do you accept?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept cash, bank transfers, mobile money (MTN, Vodafone, AirtelTigo), and major credit/debit cards. Payment terms can be discussed for bulk orders.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in" data-delay="600">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Do you deliver outside Accra?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we deliver throughout Ghana. Delivery fees vary based on location and order size. We also partner with courier services for nationwide delivery.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in" data-delay="800">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Can I see a sample before bulk printing?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We provide sample prints for approval before proceeding with bulk orders. This ensures you're completely satisfied with the quality and design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map Modal -->
+    <div id="locationModal" class="glass-modal">
+        <div class="glass-modal-content">
+            <div class="modal-header">
+                <h3>Our Location</h3>
+                <button onclick="closeLocationModal()" class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <div class="map-icon">📍</div>
+                        <h4>INKWATT Printing</h4>
+                        <p>Accra, Ghana</p>
+                        <p>West Africa</p>
+                        <div class="map-actions">
+                            <a href="https://maps.google.com/?q=Accra,Ghana" target="_blank" class="map-btn">
+                                Open in Google Maps
+                            </a>
+                            <button onclick="getDirections()" class="map-btn">
+                                Get Directions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Email Modal -->
+    <div id="emailModal" class="glass-modal">
+        <div class="glass-modal-content">
+            <div class="modal-header">
+                <h3>Send Email</h3>
+                <button onclick="closeEmailModal()" class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="emailForm">
+                    <div class="glass-form-group">
+                        <label class="glass-label">Your Email</label>
+                        <input type="email" name="email" class="glass-input" required>
+                    </div>
+                    <div class="glass-form-group">
+                        <label class="glass-label">Subject</label>
+                        <input type="text" name="subject" class="glass-input" required>
+                    </div>
+                    <div class="glass-form-group">
+                        <label class="glass-label">Message</label>
+                        <textarea name="message" class="glass-textarea" rows="5" required></textarea>
+                    </div>
+                    <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+                        <button type="button" onclick="closeEmailModal()" class="glass-btn" style="background: rgba(255, 255, 255, 0.2);">
+                            Cancel
+                        </button>
+                        <button type="submit" class="glass-btn" style="background: #0066cc; color: white;">
+                            Send Email
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="INKWATT" class="footer-logo-image">
+                        <div class="footer-logo-text">
+                            <h3>INKWATT</h3>
+                            <p>Smart Printing Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>WhatsApp: +233 594 188 747</p>
+                    <p>Available 24/7</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 INKWATT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/233594188747" target="_blank" class="whatsapp-float">
+        <span class="whatsapp-icon">💬</span>
+        <span class="whatsapp-text">Chat With Us</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/whatsappBot.js"></script>
+    
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    this.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.textContent = '☰';
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.textContent = '☰';
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            // Build WhatsApp message
+            const message = `📋 *NEW CONTACT INQUIRY - INKWATT* 📋
+
+👤 *Contact Information:*
+• Name: ${data.name}
+• Email: ${data.email || 'Not provided'}
+• Phone: ${data.phone}
+• Company: ${data.company || 'Not provided'}
+
+🎯 *Service Interest:*
+• Service: ${data.service}
+• Urgent: ${data.urgent ? 'Yes' : 'No'}
+• Preferred Contact: ${data.contactMethod}
+
+📝 *Project Details:*
+${data.message || 'No specific project details provided'}
+
+📎 *Files Attached:* ${document.getElementById('designFiles').files.length} file(s)
+
+---
+Please contact me to discuss my printing needs.
+Thank you! 🙏`;
+
+            // Send to WhatsApp
+            const whatsappUrl = `https://wa.me/233594188747?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Show success message
+            showSuccessMessage();
+            
+            // Track inquiry
+            trackInquiry(data);
+            
+            // Reset form
+            e.target.reset();
+            document.getElementById('fileList').innerHTML = '';
+        });
+
+        // File upload handling
+        document.getElementById('designFiles').addEventListener('change', function(e) {
+            const files = Array.from(e.target.files);
+            const fileList = document.getElementById('fileList');
+            
+            fileList.innerHTML = files.map((file, index) => `
+                <div class="file-item">
+                    <span class="file-name">${file.name}</span>
+                    <span class="file-size">(${formatFileSize(file.size)})</span>
+                    <button onclick="removeFile(${index})" class="remove-file">&times;</button>
+                </div>
+            `).join('');
+        });
+
+        // Drag and drop functionality
+        const uploadArea = document.querySelector('.file-upload-area');
+        
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('drag-over');
+        });
+        
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('drag-over');
+        });
+        
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('drag-over');
+            
+            const files = Array.from(e.dataTransfer.files);
+            const validFiles = files.filter(file => {
+                const isValidType = file.type.match(/image\/.*|application\/pdf/);
+                const isValidSize = file.size <= 10 * 1024 * 1024;
+                return isValidType && isValidSize;
+            });
+            
+            if (validFiles.length > 0) {
+                document.getElementById('designFiles').files = createFileList(validFiles);
+                document.getElementById('designFiles').dispatchEvent(new Event('change'));
+            }
+        });
+
+        // Helper functions
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        function removeFile(index) {
+            const fileInput = document.getElementById('designFiles');
+            const files = Array.from(fileInput.files);
+            files.splice(index, 1);
+            fileInput.files = createFileList(files);
+            fileInput.dispatchEvent(new Event('change'));
+        }
+
+        function createFileList(files) {
+            const dataTransfer = new DataTransfer();
+            files.forEach(file => dataTransfer.items.add(file));
+            return dataTransfer.files;
+        }
+
+        function resetForm() {
+            document.getElementById('contactForm').reset();
+            document.getElementById('fileList').innerHTML = '';
+        }
+
+        function showSuccessMessage() {
+            const modal = document.createElement('div');
+            modal.className = 'glass-modal active';
+            modal.innerHTML = `
+                <div class="glass-modal-content" style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
+                    <h2>Message Sent Successfully!</h2>
+                    <p>Your inquiry has been sent to INKWATT via WhatsApp.</p>
+                    <p style="margin-top: 1rem; color: #25D366;">We'll contact you shortly!</p>
+                    <button onclick="this.closest('.glass-modal').remove()" class="glass-btn" style="margin-top: 1.5rem; background: #25D366; color: white;">
+                        Close
+                    </button>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            setTimeout(() => {
+                if (document.body.contains(modal)) {
+                    modal.remove();
+                }
+            }, 5000);
+        }
+
+        function trackInquiry(data) {
+            const inquiry = {
+                name: data.name,
+                phone: data.phone,
+                email: data.email,
+                service: data.service,
+                urgent: data.urgent,
+                timestamp: new Date().toISOString()
+            };
+            
+            const inquiries = JSON.parse(localStorage.getItem('inkwatt_inquiries') || '[]');
+            inquiries.push(inquiry);
+            localStorage.setItem('inkwatt_inquiries', JSON.stringify(inquiries));
+            
+            // Update user interactions
+            const interactions = JSON.parse(localStorage.getItem('inkwatt_interactions') || '{}');
+            interactions.inquiriesSubmitted = (interactions.inquiriesSubmitted || 0) + 1;
+            localStorage.setItem('inkwatt_interactions', JSON.stringify(interactions));
+        }
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                toggle.textContent = '+';
+            } else {
+                answer.style.display = 'block';
+                toggle.textContent = '-';
+            }
+        }
+
+        // Location Modal
+        function showLocationMap() {
+            document.getElementById('locationModal').classList.add('active');
+        }
+
+        function closeLocationModal() {
+            document.getElementById('locationModal').classList.remove('active');
+        }
+
+        function getDirections() {
+            window.open('https://maps.google.com/?q=Accra,Ghana&dirflg=d', '_blank');
+        }
+
+        // Email Modal
+        function showEmailModal() {
+            document.getElementById('emailModal').classList.add('active');
+        }
+
+        function closeEmailModal() {
+            document.getElementById('emailModal').classList.remove('active');
+        }
+
+        // Email form handling
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            // Create email URL
+            const subject = encodeURIComponent(data.subject);
+            const body = encodeURIComponent(`Name: ${data.email}\n\nMessage:\n${data.message}`);
+            const emailUrl = `mailto:info@inkwatt.com?subject=${subject}&body=${body}`;
+            
+            window.location.href = emailUrl;
+            closeEmailModal();
+        });
+
+        // Close modals on outside click
+        document.querySelectorAll('.glass-modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    <style>
+        /* Contact Page Specific Styles */
+        .contact-hero {
+            padding: 120px 0 60px;
+            text-align: center;
+            color: white;
+        }
+
+        .contact-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-info {
+            padding: 60px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .info-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .info-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-btn {
+            background: #25D366;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .contact-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        .contact-btn.emergency {
+            background: #ff6b6b;
+        }
+
+        .contact-btn.emergency:hover {
+            background: #ff5252;
+        }
+
+        .contact-form-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .form-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .file-upload-area {
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload-area.drag-over {
+            border-color: #0066cc;
+            background: rgba(0, 102, 204, 0.1);
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-upload-label {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .upload-icon {
+            font-size: 2rem;
+        }
+
+        .upload-text {
+            font-weight: 600;
+            color: #0066cc;
+        }
+
+        .upload-hint {
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        .file-list {
+            margin-top: 1rem;
+            text-align: left;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .file-name {
+            flex: 1;
+            color: #333;
+        }
+
+        .file-size {
+            color: #666;
+            font-size: 0.875rem;
+        }
+
+        .remove-file {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .submit-btn,
+        .reset-btn {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .submit-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .submit-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        .reset-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: #333;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .reset-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .quick-contact {
+            padding: 80px 0;
+        }
+
+        .quick-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .quick-option {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .quick-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .quick-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .quick-option h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .quick-option p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .quick-btn {
+            background: #0066cc;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .quick-btn:hover {
+            background: #004499;
+            transform: translateY(-2px);
+        }
+
+        .faq-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(0, 102, 204, 0.05);
+        }
+
+        .faq-question h4 {
+            margin: 0;
+            color: #333;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-answer p {
+            padding: 0 0 1.5rem 0;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .map-placeholder {
+            background: #f5f5f5;
+            border-radius: 10px;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .map-content {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .map-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .map-content h4 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .map-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .map-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .map-btn {
+            background: #0066cc;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .map-btn:hover {
+            background: #004499;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid,
+            .quick-options {
+                grid-template-columns: 1fr;
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
+
+            .radio-group {
+                flex-direction: column;
+            }
+
+            .map-actions {
+                flex-direction: column;
+            }
+
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+
+            .form-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</body>
+</html>

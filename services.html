@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - INKWATT Smart Printing Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/glass-ui.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png"  alt="INKWATT" class="logo-image">
+                <div class="logo-text">
+                    <h1>INKWATT</h1>
+                    <span class="tagline">Smart Printing Solutions</span>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="hero-content animate-fade-in">
+                <h1>Our Printing Services</h1>
+                <p>Professional printing solutions for all your needs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-main">
+        <div class="container">
+            <div class="services-grid">
+                <!-- DTF Printing -->
+                <div class="service-card animate-scale-up">
+                    <div class="service-header">
+                        <div class="service-icon">🎨</div>
+                        <h3>DTF Printing</h3>
+                        <span class="service-badge">Popular</span>
+                    </div>
+                    <div class="service-content">
+                        <p>Direct-to-Film printing technology for vibrant, durable prints on any fabric. Perfect for custom apparel with complex designs and gradients.</p>
+                        <ul class="service-features">
+                            <li>✓ Vibrant colors</li>
+                            <li>✓ Durable prints</li>
+                            <li>✓ Works on any fabric</li>
+                            <li>✓ Complex designs</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">GHS 50</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <button class="service-order-btn" onclick="orderService('DTF Printing')">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- T-Shirt Printing -->
+                <div class="service-card animate-scale-up" data-delay="200">
+                    <div class="service-header">
+                        <div class="service-icon">👕</div>
+                        <h3>T-Shirt Printing</h3>
+                        <span class="service-badge">Bestseller</span>
+                    </div>
+                    <div class="service-content">
+                        <p>Custom t-shirt printing with premium quality materials. Choose from various printing methods including screen printing, heat transfer, and embroidery.</p>
+                        <ul class="service-features">
+                            <li>✓ Multiple printing methods</li>
+                            <li>✓ Various sizes available</li>
+                            <li>✓ Bulk discounts</li>
+                            <li>✓ Fast turnaround</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">GHS 30</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <button class="service-order-btn" onclick="orderService('T-Shirt Printing')">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Flyer Printing -->
+                <div class="service-card animate-scale-up" data-delay="400">
+                    <div class="service-header">
+                        <div class="service-icon">📄</div>
+                        <h3>Flyer Printing</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Professional flyer printing for marketing and promotions. High-quality prints on various paper stocks with fast delivery.</p>
+                        <ul class="service-features">
+                            <li>✓ Multiple paper types</li>
+                            <li>✓ Full color printing</li>
+                            <li>✓ Various sizes</li>
+                            <li>✓ Quick delivery</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">GHS 0.50</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <button class="service-order-btn" onclick="orderService('Flyer Printing')">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Poster Printing -->
+                <div class="service-card animate-scale-up" data-delay="600">
+                    <div class="service-header">
+                        <div class="service-icon">📊</div>
+                        <h3>Poster Printing</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Large format poster printing for events, advertisements, and decorations. High-resolution prints with vibrant colors.</p>
+                        <ul class="service-features">
+                            <li>✓ Large format sizes</li>
+                            <li>✓ High resolution</li>
+                            <li>✓ Weather resistant options</li>
+                            <li>✓ Custom sizes</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">GHS 20</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <button class="service-order-btn" onclick="orderService('Poster Printing')">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Book Printing -->
+                <div class="service-card animate-scale-up" data-delay="800">
+                    <div class="service-header">
+                        <div class="service-icon">📚</div>
+                        <h3>Book Printing</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Professional book printing and binding services. From novels to textbooks, we handle all types of book publishing.</p>
+                        <ul class="service-features">
+                            <li>✓ Various binding options</li>
+                            <li>✓ Custom cover designs</li>
+                            <li>✓ ISBN registration</li>
+                            <li>✓ Bulk printing</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">GHS 15</span>
+                            <span class="price-unit">per book</span>
+                        </div>
+                        <button class="service-order-btn" onclick="orderService('Book Printing')">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cup Printing -->
+                <div class="service-card animate-scale-up" data-delay="1000">
+                    <div class="service-header">
+                        <div class="service-icon">☕</div>
+                        <h3>Cup Printing</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Custom printed cups and mugs for businesses, events, and personal use. Durable prints that are dishwasher safe.</p>
+                        <ul class="service-features">
+                            <li>✓ Various cup types</li>
+                            <li>✓ Full wrap printing</li>
+                            <li>✓ Dishwasher safe</li>
+                            <li>✓ Bulk orders</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">GHS 25</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <button class="service-order-btn" onclick="orderService('Cup Printing')">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Rubber Stamp Printing -->
+                <div class="service-card animate-scale-up" data-delay="1200">
+                    <div class="service-header">
+                        <div class="service-icon">🔖</div>
+                        <h3>Rubber Stamp Printing</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Custom rubber stamps for business and personal use. High-quality stamps with precise impressions and durable materials.</p>
+                        <ul class="service-features">
+                            <li>✓ Custom designs</li>
+                            <li>✓ Various sizes</li>
+                            <li>✓ Self-inking options</li>
+                            <li>✓ Fast production</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">GHS 40</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <button class="service-order-btn" onclick="orderService('Rubber Stamp Printing')">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Business Cards -->
+                <div class="service-card animate-scale-up" data-delay="1400">
+                    <div class="service-header">
+                        <div class="service-icon">💼</div>
+                        <h3>Business Cards</h3>
+                        <span class="service-badge">Premium</span>
+                    </div>
+                    <div class="service-content">
+                        <p>Premium quality business cards with various finishing options. Make a lasting impression with professional business cards.</p>
+                        <ul class="service-features">
+                            <li>✓ Premium paper stocks</li>
+                            <li>✓ Various finishes</li>
+                            <li>✓ Rounded corners</li>
+                            <li>✓ Spot UV options</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">GHS 2</span>
+                            <span class="price-unit">per piece</span>
+                        </div>
+                        <button class="service-order-btn" onclick="orderService('Business Cards')">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Process -->
+    <section class="service-process">
+        <div class="container">
+            <h2 class="section-title animate-fade-in">How It Works</h2>
+            <div class="process-steps">
+                <div class="process-step animate-slide-in-left">
+                    <div class="step-number">1</div>
+                    <h3>Choose Service</h3>
+                    <p>Select the printing service that best fits your needs</p>
+                </div>
+                <div class="process-step animate-slide-in-up">
+                    <div class="step-number">2</div>
+                    <h3>Provide Details</h3>
+                    <p>Share your requirements and design specifications</p>
+                </div>
+                <div class="process-step animate-slide-in-right">
+                    <div class="step-number">3</div>
+                    <h3>Get Quote</h3>
+                    <p>Receive instant pricing via WhatsApp</p>
+                </div>
+                <div class="process-step animate-slide-in-left">
+                    <div class="step-number">4</div>
+                    <h3>Confirm Order</h3>
+                    <p>Approve the quote and confirm your order</p>
+                </div>
+                <div class="process-step animate-slide-in-up">
+                    <div class="step-number">5</div>
+                    <h3>Receive Delivery</h3>
+                    <p>Get your printed items delivered to your location</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title animate-fade-in">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item animate-fade-in">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What is the turnaround time for orders?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Turnaround time varies by service and quantity. Standard orders typically take 3-5 business days, while rush orders can be completed within 24-48 hours.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-fade-in" data-delay="200">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Do you offer design services?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer professional design services for an additional fee. Our design team can help create custom designs based on your requirements.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-fade-in" data-delay="400">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What file formats do you accept?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept high-resolution formats including PDF, AI, EPS, PSD, JPG, and PNG. Files should be at least 300 DPI for best print quality.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-fade-in" data-delay="600">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Do you deliver outside of Accra?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer delivery services throughout Ghana. Delivery fees vary based on location and order size.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content animate-fade-in">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Get in touch with us today for a free consultation and quote</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/233594188747" target="_blank" class="whatsapp-btn">
+                        <span class="whatsapp-icon">📱</span>
+                        Get Quote on WhatsApp
+                    </a>
+                    <a href="contact.html" class="btn-secondary">Contact Form</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="INKWATT" class="footer-logo-image">
+                        <div class="footer-logo-text">
+                            <h3>INKWATT</h3>
+                            <p>Smart Printing Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>WhatsApp: +233 594 188 747</p>
+                    <p>Available 24/7</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 INKWATT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/233594188747" target="_blank" class="whatsapp-float">
+        <span class="whatsapp-icon">💬</span>
+        <span class="whatsapp-text">Chat With Us</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/whatsappBot.js"></script>
+    
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    this.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.textContent = '☰';
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.textContent = '☰';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        // Enhanced service page functionality with WhatsApp bot integration
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click handlers to service cards
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            serviceCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const serviceName = this.querySelector('h3').textContent;
+                    const serviceDescription = this.querySelector('p').textContent;
+                    showServiceDetails(serviceName, serviceDescription);
+                });
+            });
+        });
+        
+        function showServiceDetails(serviceName, serviceDescription) {
+            const modal = document.createElement('div');
+            modal.className = 'glass-modal active';
+            modal.innerHTML = `
+                <div class="glass-modal-content">
+                    <h2>${serviceName}</h2>
+                    <p>${serviceDescription}</p>
+                    <div class="service-details">
+                        <h3>What We Offer:</h3>
+                        <ul>
+                            <li>High-quality printing</li>
+                            <li>Fast turnaround</li>
+                            <li>Competitive pricing</li>
+                            <li>Professional design assistance</li>
+                            <li>Delivery options available</li>
+                        </ul>
+                        
+                        <div class="service-form">
+                            <h4>Quick Quote Request</h4>
+                            <form id="serviceQuoteForm">
+                                <div class="form-group">
+                                    <label>Your Name *</label>
+                                    <input type="text" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone Number *</label>
+                                    <input type="tel" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email Address</label>
+                                    <input type="email" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Project Details</label>
+                                    <textarea name="details" placeholder="Describe your project requirements..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Deadline</label>
+                                    <input type="date" name="deadline">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button onclick="this.closest('.glass-modal').remove()" class="glass-btn" style="background: rgba(255, 255, 255, 0.2);">Close</button>
+                        <button onclick="requestService('${serviceName}')" class="glass-btn" style="background: #25D366; color: white;">Get Quote via WhatsApp</button>
+                    </div>
+                </div>
+            `;
+            
+            // Add styles
+            const style = document.createElement('style');
+            style.textContent = `
+                .service-details {
+                    margin: 2rem 0;
+                }
+                
+                .service-details ul {
+                    list-style: none;
+                    padding: 0;
+                }
+                
+                .service-details li {
+                    padding: 0.5rem 0;
+                    position: relative;
+                    padding-left: 1.5rem;
+                    color: var(--text-color);
+                }
+                
+                .service-details li:before {
+                    content: "✓";
+                    position: absolute;
+                    left: 0;
+                    color: #25D366;
+                    font-weight: bold;
+                }
+                
+                .service-form {
+                    margin-top: 2rem;
+                    padding: 1.5rem;
+                    background: rgba(255, 255, 255, 0.05);
+                    border-radius: 15px;
+                }
+                
+                .service-form h4 {
+                    margin: 0 0 1rem 0;
+                    color: var(--text-color);
+                }
+                
+                .form-group {
+                    margin-bottom: 1rem;
+                }
+                
+                .form-group label {
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    color: var(--text-color);
+                    font-weight: 600;
+                }
+                
+                .form-group input,
+                .form-group textarea {
+                    width: 100%;
+                    padding: 0.8rem;
+                    background: var(--glass-bg);
+                    border: 1px solid var(--glass-border);
+                    border-radius: 8px;
+                    color: var(--text-color);
+                }
+                
+                .form-group textarea {
+                    min-height: 80px;
+                    resize: vertical;
+                }
+            `;
+            document.head.appendChild(style);
+            
+            document.body.appendChild(modal);
+        }
+        
+        // Enhanced service request with WhatsApp bot integration
+        function requestService(serviceName) {
+            const form = document.getElementById('serviceQuoteForm');
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            
+            // Validate required fields
+            if (!data.name || !data.phone) {
+                alert('Please fill in the required fields (Name and Phone Number)');
+                return;
+            }
+            
+            // Prepare service request data
+            const serviceData = {
+                serviceName: serviceName,
+                customerName: data.name,
+                customerPhone: data.phone,
+                customerEmail: data.email,
+                projectDetails: data.details,
+                deadline: data.deadline,
+                requestType: 'Service Quote'
+            };
+            
+            // Use WhatsApp bot if available
+            if (window.whatsappBot) {
+                window.whatsappBot.sendProductOrder(`${serviceName} - Service Request`, serviceData);
+            } else {
+                // Fallback message
+                const message = `🎨 *INKWATT PRINTING - SERVICE REQUEST* 🎨
+
+🔧 *Service Information:*
+• Service: ${serviceName}
+• Request Type: Service Quote
+• Project Details: ${data.details || 'No specific details provided'}
+• Deadline: ${data.deadline || 'Not specified'}
+
+👤 *Customer Information:*
+• Name: ${data.name}
+• Phone: ${data.phone}
+• Email: ${data.email || 'Not provided'}
+
+⏰ *Request Time:* ${new Date().toLocaleString()}
+🌐 *Source:* INKWATT Website Services Page
+
+🚀 *I'm interested in this service! Please contact me to discuss my project and provide a quote.*
+
+---
+💬 *Reply to this message to get started immediately!`;
+                
+                const whatsappUrl = `https://wa.me/233594188747?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            }
+            
+            // Close modal
+            document.querySelector('.glass-modal').remove();
+        }
+    </script>
+
+    <script>
+        // Service ordering function
+        function orderService(serviceName) {
+            const modal = document.createElement('div');
+            modal.className = 'glass-modal active';
+            modal.innerHTML = `
+                <div class="glass-modal-content">
+                    <h3>Order ${serviceName}</h3>
+                    <form id="serviceOrderForm">
+                        <div class="glass-form-group">
+                            <label class="glass-label">Your Name</label>
+                            <input type="text" class="glass-input" name="name" required>
+                        </div>
+                        <div class="glass-form-group">
+                            <label class="glass-label">Phone Number</label>
+                            <input type="tel" class="glass-input" name="phone" required>
+                        </div>
+                        <div class="glass-form-group">
+                            <label class="glass-label">Quantity</label>
+                            <input type="number" class="glass-input" name="quantity" min="1" required>
+                        </div>
+                        <div class="glass-form-group">
+                            <label class="glass-label">Size/Specifications</label>
+                            <select class="glass-select" name="size" required>
+                                <option value="">Select size</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                                <option value="A4">A4</option>
+                                <option value="A3">A3</option>
+                                <option value="Custom">Custom</option>
+                            </select>
+                        </div>
+                        <div class="glass-form-group">
+                            <label class="glass-label">Delivery Date</label>
+                            <input type="date" class="glass-input" name="delivery" required>
+                        </div>
+                        <div class="glass-form-group">
+                            <label class="glass-label">Additional Notes</label>
+                            <textarea class="glass-textarea" name="notes" placeholder="Any special requirements or design specifications..."></textarea>
+                        </div>
+                        <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+                            <button type="button" onclick="this.closest('.glass-modal').remove()" class="glass-btn" style="background: rgba(255, 255, 255, 0.2);">
+                                Cancel
+                            </button>
+                            <button type="submit" class="glass-btn" style="background: #25D366; color: white;">
+                                Send Order via WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Handle form submission
+            modal.querySelector('#serviceOrderForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target);
+                const data = Object.fromEntries(formData);
+                
+                // Send WhatsApp message
+                const message = `Hello INKWATT! 🎨\n\nI want to order:\n\nService: ${serviceName}\nName: ${data.name}\nPhone: ${data.phone}\nQuantity: ${data.quantity}\nSize: ${data.size}\nDelivery Date: ${data.delivery}\nNotes: ${data.notes}\n\nPlease provide a quote and availability.\nThank you! 🙏`;
+                
+                const whatsappUrl = `https://wa.me/233594188747?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+                
+                modal.remove();
+            });
+        }
+
+        // FAQ Toggle Function
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                toggle.textContent = '+';
+            } else {
+                answer.style.display = 'block';
+                toggle.textContent = '-';
+            }
+        }
+    </script>
+
+    <style>
+        /* Services Page Specific Styles */
+        .services-hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .services-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .services-main {
+            padding: 80px 0;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0066cc, #004499);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .service-header h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 0;
+        }
+
+        .service-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #ff6b6b;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .service-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            padding: 0.3rem 0;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .service-pricing {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-from {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .price-amount {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .price-unit {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .service-order-btn {
+            width: 100%;
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .service-order-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        .service-process {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            color: white;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0066cc, #004499);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+            color: white;
+        }
+
+        .process-step h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .faq-section {
+            padding: 80px 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(0, 102, 204, 0.05);
+        }
+
+        .faq-question h4 {
+            margin: 0;
+            color: #333;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-answer p {
+            padding: 0 0 1.5rem 0;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-content {
+            text-align: center;
+            color: white;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .services-hero h1 {
+                font-size: 2rem;
+            }
+
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</body>
+</html>

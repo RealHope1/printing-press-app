@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - INKWATT Smart Printing Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/glass-ui.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png"  alt="INKWATT" class="logo-image">
+                <div class="logo-text">
+                    <h1>INKWATT</h1>
+                    <span class="tagline">Smart Printing Solutions</span>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Product Details Section -->
+    <section class="product-details">
+        <div class="container">
+            <div class="product-container">
+                <!-- Product Gallery -->
+                <div class="product-gallery animate-fade-in">
+                    <div class="main-image">
+                        <img id="mainProductImage" src="" alt="Product">
+                        <button onclick="zoomImage()" class="zoom-btn">🔍</button>
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active" onclick="changeImage(0)">
+                            <img src="" alt="Thumbnail 1">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage(1)">
+                            <img src="" alt="Thumbnail 2">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage(2)">
+                            <img src="" alt="Thumbnail 3">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage(3)">
+                            <img src="" alt="Thumbnail 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Information -->
+                <div class="product-info animate-slide-up">
+                    <h1 id="productTitle"></h1>
+                    <div class="product-category" id="productCategory"></div>
+                    <div class="product-price">
+                        <span class="current-price" id="productPrice"></span>
+                        <span class="price-unit">per piece</span>
+                    </div>
+                    
+                    <div class="product-description">
+                        <p id="productDescription"></p>
+                    </div>
+
+                    <!-- Product Features -->
+                    <div class="product-features">
+                        <h3>Features & Benefits</h3>
+                        <ul id="productFeatures"></ul>
+                    </div>
+
+                    <!-- Customization Options -->
+                    <div class="customization-options">
+                        <h3>Customize Your Order</h3>
+                        <form id="customizationForm">
+                            <div class="glass-form-group">
+                                <label class="glass-label">Quantity *</label>
+                                <div class="quantity-selector">
+                                    <button type="button" onclick="changeQuantity(-1)">-</button>
+                                    <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+                                    <button type="button" onclick="changeQuantity(1)">+</button>
+                                </div>
+                            </div>
+
+                            <div class="glass-form-group">
+                                <label class="glass-label">Size/Specifications *</label>
+                                <select id="size" name="size" class="glass-select" required>
+                                    <option value="">Select size</option>
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                    <option value="A0">A0</option>
+                                    <option value="A1">A1</option>
+                                    <option value="A2">A2</option>
+                                    <option value="A3">A3</option>
+                                    <option value="A4">A4</option>
+                                    <option value="A5">A5</option>
+                                    <option value="Letter">Letter</option>
+                                    <option value="Legal">Legal</option>
+                                    <option value="Custom">Custom</option>
+                                </select>
+                            </div>
+
+                            <div class="glass-form-group">
+                                <label class="glass-label">Paper Type</label>
+                                <select id="paperType" name="paperType" class="glass-select">
+                                    <option value="Standard">Standard</option>
+                                    <option value="Premium">Premium</option>
+                                    <option value="Glossy">Glossy</option>
+                                    <option value="Matte">Matte</option>
+                                    <option value="Recycled">Recycled</option>
+                                </select>
+                            </div>
+
+                            <div class="glass-form-group">
+                                <label class="glass-label">Color Options</label>
+                                <div class="color-options">
+                                    <label class="color-option">
+                                        <input type="radio" name="color" value="Full Color" checked>
+                                        <span class="color-label">Full Color</span>
+                                    </label>
+                                    <label class="color-option">
+                                        <input type="radio" name="color" value="Black & White">
+                                        <span class="color-label">Black & White</span>
+                                    </label>
+                                    <label class="color-option">
+                                        <input type="radio" name="color" value="Spot Color">
+                                        <span class="color-label">Spot Color</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="glass-form-group">
+                                <label class="glass-label">Delivery Date *</label>
+                                <input type="date" id="deliveryDate" name="deliveryDate" class="glass-input" required>
+                            </div>
+
+                            <div class="glass-form-group">
+                                <label class="glass-label">Design Requirements</label>
+                                <textarea id="designNotes" name="designNotes" class="glass-textarea" 
+                                    placeholder="Please describe your design requirements, colors, text, and any specific instructions..."></textarea>
+                            </div>
+
+                            <div class="glass-form-group">
+                                <label class="glass-label">Upload Design File</label>
+                                <div class="file-upload">
+                                    <input type="file" id="designFile" name="designFile" class="file-input" 
+                                        accept="image/*,.pdf,.ai,.eps,.psd">
+                                    <label for="designFile" class="file-upload-btn">
+                                        <span class="upload-icon">📁</span>
+                                        <span class="upload-text">Choose File</span>
+                                    </label>
+                                    <span id="fileName" class="file-name">No file chosen</span>
+                                </div>
+                                <small style="color: #666; font-size: 0.875rem;">
+                                    Supported formats: JPG, PNG, PDF, AI, EPS, PSD (Max 10MB)
+                                </small>
+                            </div>
+
+                            <div class="price-calculator">
+                                <div class="price-row">
+                                    <span>Unit Price:</span>
+                                    <span id="unitPrice">GHS 0</span>
+                                </div>
+                                <div class="price-row">
+                                    <span>Quantity:</span>
+                                    <span id="quantityDisplay">1</span>
+                                </div>
+                                <div class="price-row total">
+                                    <span>Total:</span>
+                                    <span id="totalPrice">GHS 0</span>
+                                </div>
+                            </div>
+
+                            <div class="order-actions">
+                                <button type="submit" class="order-btn">
+                                    <span class="btn-icon">🛒</span>
+                                    Send Order via WhatsApp
+                                </button>
+                                <button type="button" onclick="saveForLater()" class="save-btn">
+                                    <span class="btn-icon">❤️</span>
+                                    Save for Later
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Specifications -->
+    <section class="product-specifications">
+        <div class="container">
+            <h2 class="section-title animate-fade-in">Product Specifications</h2>
+            <div class="specs-grid">
+                <div class="spec-card animate-scale-up">
+                    <h3>Material Quality</h3>
+                    <p>We use only premium materials to ensure the best quality and durability for your printed products.</p>
+                </div>
+                <div class="spec-card animate-scale-up" data-delay="200">
+                    <h3>Printing Technology</h3>
+                    <p>State-of-the-art printing equipment ensures vibrant colors and sharp details on every print.</p>
+                </div>
+                <div class="spec-card animate-scale-up" data-delay="400">
+                    <h3>Turnaround Time</h3>
+                    <p>Standard orders completed within 3-5 business days. Rush delivery available for urgent needs.</p>
+                </div>
+                <div class="spec-card animate-scale-up" data-delay="600">
+                    <h3>Quality Guarantee</h3>
+                    <p>100% satisfaction guarantee. We'll reprint if you're not completely satisfied with the results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title animate-fade-in">Related Products</h2>
+            <div class="related-products-grid" id="relatedProductsGrid">
+                <!-- Related products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Zoom Modal -->
+    <div id="imageZoomModal" class="glass-modal">
+        <div class="zoom-modal-content">
+            <button onclick="closeZoom()" class="close-zoom">&times;</button>
+            <img id="zoomedImage" src="" alt="Zoomed product image">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="INKWATT" class="footer-logo-image">
+                        <div class="footer-logo-text">
+                            <h3>INKWATT</h3>
+                            <p>Smart Printing Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>WhatsApp: +233 594 188 747</p>
+                    <p>Available 24/7</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 INKWATT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/233594188747" target="_blank" class="whatsapp-float">
+        <span class="whatsapp-icon">💬</span>
+        <span class="whatsapp-text">Chat With Us</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/whatsappBot.js"></script>
+    
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    this.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.textContent = '☰';
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.textContent = '☰';
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="js/shop.js"></script>
+    <script>
+        let currentProduct = null;
+        let currentImageIndex = 0;
+        const productImages = [];
+
+        // Load product data
+        function loadProduct() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productName = urlParams.get('product');
+            
+            // Get product from localStorage or use default
+            const savedProduct = localStorage.getItem('selectedProduct');
+            if (savedProduct) {
+                currentProduct = JSON.parse(savedProduct);
+                localStorage.removeItem('selectedProduct');
+            } else {
+                // Default product if none found
+                currentProduct = {
+                    id: 1,
+                    name: 'Basic T-Shirt Printing',
+                    category: 'tshirts',
+                    price: 30,
+                    size: 'Custom',
+                    image: 'images/tshirts/basic-tshirt.jpg',
+                    description: 'Custom printed t-shirts with your design. Perfect for events, businesses, and personal use.',
+                    features: ['100% Cotton', 'Vibrant Colors', 'Durable Print', 'Various Sizes', 'Machine Washable', 'Quick Delivery']
+                };
+            }
+
+            displayProduct();
+            loadRelatedProducts();
+        }
+
+        // Display product information
+        function displayProduct() {
+            if (!currentProduct) return;
+
+            document.getElementById('productTitle').textContent = currentProduct.name;
+            document.getElementById('productCategory').textContent = currentProduct.category.charAt(0).toUpperCase() + currentProduct.category.slice(1);
+            document.getElementById('productPrice').textContent = `GHS ${currentProduct.price}`;
+            document.getElementById('productDescription').textContent = currentProduct.description;
+            
+            // Update product image
+            const mainImage = document.getElementById('mainProductImage');
+            mainImage.src = 'images/photo_15_2026-03-07_18-17-47.jpg';
+            
+            // Update thumbnails with actual images
+            const thumbnails = document.querySelectorAll('.thumbnail img');
+            thumbnails[0].src = 'images/photo_15_2026-03-07_18-17-47.jpg';
+            thumbnails[1].src = 'images/photo_16_2026-03-07_18-17-47.jpg';
+            thumbnails[2].src = 'images/photo_20_2026-03-07_18-17-49.jpg';
+            thumbnails[3].src = 'images/photo_23_2026-03-07_18-17-50.jpg';
+            
+            // Setup enhanced price calculator
+            setupPriceCalculator();
+        });
+        
+        function setupPriceCalculator() {
+            const quantityInput = document.getElementById('quantity');
+            const sizeSelect = document.getElementById('size');
+            const priceDisplay = document.getElementById('productPrice');
+            
+            function updatePrice() {
+                const basePrice = 30;
+                const quantity = parseInt(quantityInput.value) || 1;
+                const sizeMultiplier = getSizeMultiplier(sizeSelect.value);
+                const totalPrice = basePrice * quantity * sizeMultiplier;
+                priceDisplay.textContent = `GHS ${totalPrice}`;
+            }
+            
+            quantityInput.addEventListener('input', updatePrice);
+            sizeSelect.addEventListener('change', updatePrice);
+        }
+        
+        function getSizeMultiplier(size) {
+            const multipliers = {
+                'Small': 0.8,
+                'Medium': 1,
+                'Large': 1.2,
+                'XL': 1.4,
+                'XXL': 1.6,
+                'A0': 3,
+                'A1': 2.5,
+                'A2': 2,
+                'A3': 1.5,
+                'A4': 1,
+                'A5': 0.8,
+                'Letter': 1,
+                'Legal': 1.2,
+                'Custom': 1.5
+            };
+            return multipliers[size] || 1;
+        }
+        
+        function changeImage(index) {
+            const mainImage = document.getElementById('mainProductImage');
+            const thumbnails = document.querySelectorAll('.thumbnail img');
+            mainImage.src = thumbnails[index].src;
+            
+            // Update active thumbnail
+            thumbnails.forEach((thumb, i) => {
+                thumb.parentElement.classList.toggle('active', i === index);
+            });
+        }
+        
+        function zoomImage() {
+            const mainImage = document.getElementById('mainProductImage');
+            const modal = document.createElement('div');
+            modal.className = 'image-zoom-modal glass-modal active';
+            modal.innerHTML = `
+                <div class="glass-modal-content">
+                    <img src="${mainImage.src}" alt="Product Zoom">
+                    <button onclick="this.closest('.image-zoom-modal').remove()" class="close-btn">&times;</button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+        
+        function changeQuantity(amount) {
+            const quantityInput = document.getElementById('quantity');
+            const currentValue = parseInt(quantityInput.value) || 1;
+            const newValue = Math.max(1, currentValue + amount);
+            quantityInput.value = newValue;
+            
+            // Trigger price update
+            quantityInput.dispatchEvent(new Event('input'));
+        }
+        
+        // Enhanced order function with WhatsApp bot integration
+        function sendOrder() {
+            const productName = document.getElementById('productTitle').textContent;
+            const quantity = document.getElementById('quantity').value;
+            const size = document.getElementById('size').value;
+            const paperType = document.getElementById('paperType').value;
+            const color = document.getElementById('color').value;
+            const deliveryDate = document.getElementById('deliveryDate').value;
+            const designNotes = document.getElementById('designNotes').value;
+            
+            // Prepare order data
+            const orderData = {
+                quantity: quantity,
+                size: size,
+                paperType: paperType,
+                color: color,
+                deliveryDate: deliveryDate,
+                notes: designNotes,
+                totalPrice: document.getElementById('productPrice').textContent.replace('GHS ', '')
+            let basePrice = currentProduct.price;
+            let totalPrice = basePrice * quantity;
+
+            // Add size multiplier
+            const sizeMultipliers = {
+                'A0': 4, 'A1': 3, 'A2': 2.5, 'A3': 2, 'A4': 1.5, 'A5': 1.2,
+                'Letter': 1.3, 'Legal': 1.5, 'Custom': 1.8
+            };
+
+            if (size && sizeMultipliers[size]) {
+                totalPrice = basePrice * sizeMultipliers[size] * quantity;
+            }
+
+            // Add paper type multiplier
+            const paperMultipliers = {
+                'Standard': 1, 'Premium': 1.3, 'Glossy': 1.2, 'Matte': 1.15, 'Recycled': 1.1
+            };
+
+            if (paperType && paperMultipliers[paperType]) {
+                totalPrice *= paperMultipliers[paperType];
+            }
+
+            // Apply bulk discount
+            if (quantity >= 100) {
+                totalPrice *= 0.85; // 15% discount
+            } else if (quantity >= 50) {
+                totalPrice *= 0.9; // 10% discount
+            } else if (quantity >= 10) {
+                totalPrice *= 0.95; // 5% discount
+            }
+
+            // Update display
+            document.getElementById('unitPrice').textContent = `GHS ${(totalPrice / quantity).toFixed(2)}`;
+            document.getElementById('quantityDisplay').textContent = quantity;
+            document.getElementById('totalPrice').textContent = `GHS ${totalPrice.toFixed(2)}`;
+        }
+
+        // Load related products
+        function loadRelatedProducts() {
+            // In real app, this would come from an API
+            const relatedProducts = [
+                {
+                    id: 2,
+                    name: 'Premium T-Shirt Printing',
+                    price: 50,
+                    image: 'images/tshirts/premium-tshirt.jpg'
+                },
+                {
+                    id: 3,
+                    name: 'Basic Business Card',
+                    price: 2,
+                    image: 'images/cards/basic-card.jpg'
+                },
+                {
+                    id: 5,
+                    name: 'Basic Flyer',
+                    price: 0.50,
+                    image: 'images/flyers/basic-flyer.jpg'
+                }
+            ];
+
+            const grid = document.getElementById('relatedProductsGrid');
+            grid.innerHTML = relatedProducts.map((product, index) => `
+                <div class="related-product-card animate-scale-up" data-delay="${index * 200}">
+                    <div class="related-product-image">
+                        <img src="${product.image}" alt="${product.name}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjVGNUY1Ii8+CjxwYXRoIGQ9Ik0xMDAgNzBDODAuNjcgNzAgNjUgODUuNjcgNjUgMTA1QzY1IDEyNC4zMyA4MC42NyAxNDAgMTAwIDE0MEMxMTkuMzMgMTQwIDEzNSAxMjQuMzMgMTM1IDEwNUMxMzUgODUuNjcgMTE5LjMzIDcwIDEwMCA3MFoiIGZpbGw9IiNDQ0MiLz4KPHBhdGggZD0iTTUwIDE2MEgxNTBWMTcwSDUwVjE2MFoiIGZpbGw9IiNDQ0MiLz4KPHRleHQgeD0iMTAwIiB5PSIxMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM5OTkiIGZvbnQtc2l6ZT0iMTIiPkl0ZW08L3RleHQ+Cjwvc3ZnPgo='">
+                    </div>
+                    <div class="related-product-info">
+                        <h4>${product.name}</h4>
+                        <div class="related-product-price">GHS ${product.price}</div>
+                        <button onclick="viewRelatedProduct(${product.id})" class="view-related-btn">View Product</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // View related product
+        function viewRelatedProduct(productId) {
+            // In real app, this would navigate to the product page
+            window.location.href = `product.html?product=${productId}`;
+        }
+
+        // Save for later
+        function saveForLater() {
+            if (!currentProduct) return;
+
+            const savedItems = JSON.parse(localStorage.getItem('inkwatt_saved_items') || '[]');
+            const itemExists = savedItems.some(item => item.id === currentProduct.id);
+
+            if (!itemExists) {
+                savedItems.push(currentProduct);
+                localStorage.setItem('inkwatt_saved_items', JSON.stringify(savedItems));
+                
+                if (typeof animationController !== 'undefined') {
+                    animationController.showNotification('Product saved for later!', 'success');
+                }
+            } else {
+                if (typeof animationController !== 'undefined') {
+                    animationController.showNotification('Product already saved!', 'info');
+                }
+            }
+        }
+
+        // Handle form submission
+        document.getElementById('customizationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            // Get calculated total
+            const totalPrice = document.getElementById('totalPrice').textContent;
+            
+            // Build WhatsApp message
+            const message = `🛍️ *CUSTOM ORDER - INKWATT PRINTING* 🛍️
+
+📋 *Product Details:*
+• Product: ${currentProduct.name}
+• Category: ${currentProduct.category}
+• Unit Price: GHS ${currentProduct.price}
+• Total Amount: ${totalPrice}
+
+🎨 *Customization:*
+• Quantity: ${data.quantity}
+• Size: ${data.size}
+• Paper Type: ${data.paperType}
+• Color: ${document.querySelector('input[name="color"]:checked').value}
+• Delivery Date: ${data.deliveryDate}
+
+👤 *Customer Information:*
+• Name: ${data.name || 'To be provided'}
+• Email: ${data.email || 'Not provided'}
+
+📝 *Design Requirements:*
+${data.designNotes || 'No specific requirements mentioned'}
+
+📎 *Design File:* ${data.designFile?.name || 'No file uploaded'}
+
+---
+Please confirm availability, total cost, and payment details.
+Thank you! 🙏`;
+
+            // Send to WhatsApp
+            const whatsappUrl = `https://wa.me/233594188747?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+
+            // Track order
+            const order = {
+                productId: currentProduct.id,
+                productName: currentProduct.name,
+                price: currentProduct.price,
+                quantity: data.quantity,
+                total: totalPrice,
+                customization: data,
+                timestamp: new Date().toISOString()
+            };
+
+            const orders = JSON.parse(localStorage.getItem('inkwatt_orders') || '[]');
+            orders.push(order);
+            localStorage.setItem('inkwatt_orders', JSON.stringify(orders));
+
+            // Show success message
+            if (typeof animationController !== 'undefined') {
+                animationController.showNotification('Order sent successfully! We\'ll contact you soon.', 'success');
+            }
+        });
+
+        // File upload handling
+        document.getElementById('designFile').addEventListener('change', function(e) {
+            const fileName = e.target.files[0]?.name || 'No file chosen';
+            document.getElementById('fileName').textContent = fileName;
+            
+            // Validate file size
+            if (e.target.files[0] && e.target.files[0].size > 10 * 1024 * 1024) {
+                alert('File size must be less than 10MB');
+                e.target.value = '';
+                document.getElementById('fileName').textContent = 'No file chosen';
+            }
+        });
+
+        // Close modal on outside click
+        document.getElementById('imageZoomModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeZoom();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeZoom();
+            }
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', loadProduct);
+    </script>
+
+    <style>
+        /* Product Page Specific Styles */
+        .product-details {
+            padding: 120px 0 60px;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .product-gallery {
+            position: sticky;
+            top: 100px;
+        }
+
+        .main-image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .zoom-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .zoom-btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .thumbnail-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+        }
+
+        .thumbnail {
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .thumbnail.active,
+        .thumbnail:hover {
+            border-color: #0066cc;
+            transform: scale(1.05);
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        .product-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .product-category {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            text-transform: capitalize;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .current-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .price-unit {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .product-description {
+            margin-bottom: 2rem;
+        }
+
+        .product-description p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .product-features {
+            margin-bottom: 2rem;
+        }
+
+        .product-features h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .product-features ul {
+            list-style: none;
+        }
+
+        .product-features li {
+            padding: 0.5rem 0;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .customization-options {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .customization-options h3 {
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quantity-selector button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .quantity-selector button:hover {
+            background: #004499;
+        }
+
+        .quantity-selector input {
+            width: 80px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .color-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .color-option input[type="radio"] {
+            margin: 0;
+        }
+
+        .file-upload {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-upload-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(0, 102, 204, 0.1);
+            color: #0066cc;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 102, 204, 0.3);
+        }
+
+        .file-upload-btn:hover {
+            background: rgba(0, 102, 204, 0.2);
+        }
+
+        .file-name {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .price-calculator {
+            background: rgba(0, 102, 204, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+        }
+
+        .price-row.total {
+            border-top: 2px solid #0066cc;
+            margin-top: 0.5rem;
+            padding-top: 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #0066cc;
+        }
+
+        .order-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .order-btn,
+        .save-btn {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .order-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .order-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        .save-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: #333;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .save-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .product-specifications {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .spec-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .spec-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .spec-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .related-products {
+            padding: 80px 0;
+        }
+
+        .related-products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .related-product-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .related-product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .related-product-image {
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .related-product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .related-product-info {
+            padding: 1.5rem;
+        }
+
+        .related-product-info h4 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .related-product-price {
+            color: #0066cc;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .view-related-btn {
+            width: 100%;
+            background: rgba(0, 102, 204, 0.1);
+            color: #0066cc;
+            border: 1px solid rgba(0, 102, 204, 0.3);
+            padding: 0.8rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .view-related-btn:hover {
+            background: rgba(0, 102, 204, 0.2);
+        }
+
+        .zoom-modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-zoom {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #zoomedImage {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-gallery {
+                position: static;
+            }
+
+            .main-image img {
+                height: 300px;
+            }
+
+            .product-info h1 {
+                font-size: 2rem;
+            }
+
+            .current-price {
+                font-size: 1.5rem;
+            }
+
+            .order-actions {
+                flex-direction: column;
+            }
+
+            .specs-grid,
+            .related-products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
