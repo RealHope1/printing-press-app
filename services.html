@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - INKWATT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/glass-ui.css">
+</head>
+<body>
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">INKWATT</div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services" class="services-section">
+        <h1>Our Printing Services</h1>
+        <div class="services-grid">
+            <div class="service-card hover-scale">
+                <img src="images/dtf.jfif" alt="DTF Printing">
+                <h3>DTF Printing</h3>
+                <p>Direct to Film technology</p>
+            </div>
+            <div class="service-card hover-flip">
+                <img src="images/t-sert.jpg" alt="T-Shirt Printing">
+                <h3>T-Shirt Printing</h3>
+                <p>Custom apparel printing</p>
+            </div>
+            <div class="service-card hover-scale">
+                <img src="images/screen.jpg" alt="Flyer Printing">
+                <h3>Flyer Printing</h3>
+                <p>Promotional materials</p>
+            </div>
+            <div class="service-card hover-flip">
+                <img src="images/frame1.jpg" alt="Poster Printing">
+                <h3>Poster Printing</h3>
+                <p>Large format posters</p>
+            </div>
+            <div class="service-card hover-scale">
+                <img src="images/bag.jpg" alt="Book Printing">
+                <h3>Book Printing</h3>
+                <p>Book production services</p>
+            </div>
+            <div class="service-card hover-flip">
+                <img src="images/coffee.jpg" alt="Cup Printing">
+                <h3>Cup Printing</h3>
+                <p>Custom printed cups</p>
+            </div>
+            <div class="service-card hover-scale">
+                <img src="images/sticker.jpg" alt="Rubber Stamp Printing">
+                <h3>Rubber Stamp Printing</h3>
+                <p>Custom stamps</p>
+            </div>
+            <div class="service-card hover-flip">
+                <img src="images/bussiness card.jpg" alt="Business Cards">
+                <h3>Business Cards</h3>
+                <p>Professional business cards</p>
+            </div>
+        </div>
+    </section>
+
+    <a href="#" class="whatsapp-float" onclick="openChatbot(); return false;">
+        <img src="images/logo.png" alt="WhatsApp">
+        Chat With Us
+    </a>
+
+    <script src="js/app.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/whatsappBot.js"></script>
+</body>
+</html>
